@@ -1,0 +1,2 @@
+# 2025F_HACKATHON
+SKKU CSE 캐주얼 해커톤
