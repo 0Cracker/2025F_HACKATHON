@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatInput from './ChatInput';
+import TextInput from './TextInput';
 
 const MainContent = () => {
   return (
@@ -12,7 +12,7 @@ const MainContent = () => {
           아이디어를 시작하세요.
         </h1>
       </div>
-      <ChatInput />
+      <TextInput />
     </main>
   );
 };

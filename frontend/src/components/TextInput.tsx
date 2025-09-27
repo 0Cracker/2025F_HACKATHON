@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Plus, Image, Mic, Send } from 'lucide-react';
 
-const ChatInput = () => {
+const TextInput = () => {
   const [prompt, setPrompt] = useState('');
 
   return (
@@ -45,4 +45,4 @@ const ChatInput = () => {
   );
 };
 
-export default ChatInput;
+export default TextInput;
