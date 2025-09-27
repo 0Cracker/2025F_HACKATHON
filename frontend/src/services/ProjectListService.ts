@@ -5,7 +5,7 @@ export interface Project {
 }
 
 // API 기본 URL (환경 변수로 관리하는 것이 가장 좋습니다)
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8080';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://43.203.233.116:8080';
 
 /**
  * 모든 프로젝트 목록을 가져오는 함수
@@ -13,7 +13,7 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8
  */
 export const getProjects = async (): Promise<Project[]> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/v1/projects`, {
+    const response = await fetch(`${API_BASE_URL}/api/v1/projects/info`, {
       cache: 'no-store', // 항상 최신 데이터를 가져오기 위해 캐시 사용 안 함
     });
 
@@ -23,6 +23,7 @@ export const getProjects = async (): Promise<Project[]> => {
     }
 
     const data: Project[] = await response.json();
+    console.log(data)
     return data;
     
   } catch (error) {
